@@ -1,0 +1,49 @@
+{
+  "name": "@nordax/hap",
+  "version": "0.1.0",
+  "description": "Human Authorization Protocol (HAP) verification SDK — parse, validate, and verify W3C VC 2.0 agent authorization credentials issued by Nordax AI.",
+  "license": "Apache-2.0",
+  "author": "Northern Axis, LLC <info@nordax.ai> (https://nordax.ai)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nordax-Digital/hap.git"
+  },
+  "homepage": "https://nordax.ai/protocol/hap",
+  "keywords": [
+    "hap",
+    "human-authorization-protocol",
+    "verifiable-credentials",
+    "w3c-vc",
+    "ai-agents",
+    "nordax",
+    "did",
+    "authorization"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
